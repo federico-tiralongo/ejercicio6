@@ -73,8 +73,8 @@ const edadMujeres = enfermos
 
 const arrayFinal = {
     nPacientes: numeroEnfermos,
-    nMayores: mayoresGordos,
-    nDiabetico: diabeticos,
+    nMayores: mayoresGordos.length,
+    nDiabetico: diabeticos.length,
     nDiasMedia: mediaDias,
     sumaEdadMujeres: edadMujeres
 }
