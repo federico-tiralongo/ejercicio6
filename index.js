@@ -55,19 +55,27 @@ const enfermos = [
     }
 ];
 
+
 const numeroEnfermos = enfermos.length;
-console.log(numeroEnfermos);
 
 const mayoresGordos = enfermos.filter((paciente) => paciente.paciente.edad >= 18);
-console.log(mayoresGordos);
 
 const diabeticos = enfermos.filter((enfermos)=> enfermos.paciente.sexo === "H" && enfermos.dieta === "Diabetes");
-console.log(diabeticos);
 
 const mediaDias = enfermos.reduce((acumulador, enfermos) => acumulador + enfermos.diasIngresado, 0);
-console.log(mediaDias);
+
 
 const edadMujeres = enfermos
 .filter((enfermos) => enfermos.paciente.sexo === "M")
 .reduce((acumulador, enfermos)=> acumulador + enfermos.paciente.edad, 0 )
-console.log(edadMujeres);
+
+
+
+const arrayFinal = {
+    nPacientes: numeroEnfermos,
+    nMayores: mayoresGordos,
+    nDiabetico: diabeticos,
+    nDiasMedia: mediaDias,
+    sumaEdadMujeres: edadMujeres
+}
+console.log(arrayFinal);
